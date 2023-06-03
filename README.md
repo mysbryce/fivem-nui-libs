@@ -14,7 +14,7 @@ A FiveM NUI Library created to make your code look eaiser and shorter. There are
 
 ##### Initialize
 
-Create and  `script` tag and use type `module` in that
+Create and add `script` tag and use type `module` in that
 
 ```html
 // index.html
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <button type="button" data-xnets-click="setActive(2)">Show 2</button>
 <button type="button" data-xnets-click="setActive(3)">Show 3</button>
 ```
-
 
 ---
 
