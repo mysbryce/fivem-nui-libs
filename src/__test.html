@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div show-on="active equal 1" show-class="show" hide-class="hidden">Display 1</div>
+    <div show-on="active equal 2" show-class="show" hide-class="hidden">Display 2</div>
+    <div show-on="active equal 3" show-class="show" hide-class="hidden">Display 3</div>
+
+    <button type="button" data-xnets-click="setActive(1)">Show 1</button>
+    <button type="button" data-xnets-click="setActive(2)">Show 2</button>
+    <button type="button" data-xnets-click="setActive(3)">Show 3</button>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

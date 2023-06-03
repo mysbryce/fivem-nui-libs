@@ -1,2 +1,3 @@
-# fivem-nui-libs
- A FiveM NUI Library Created To Make Your Code Look Eaiser And Shorter
+# FIVEM-NUI-LIB
+
+ A FiveM NUI Library created to make your code look eaiser and shorter. There are a lots f way to make the things you want. And I'm sure that my library will be much better than before.
