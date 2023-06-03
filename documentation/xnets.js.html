@@ -1,4 +1,91 @@
-// src/xnets.js
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> xnets.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#addFunction">addFunction</a></li><li><a href="global.html#addFunctions">addFunctions</a></li><li><a href="global.html#addListener">addListener</a></li><li><a href="global.html#communicate">communicate</a></li><li><a href="global.html#getStateValue">getStateValue</a></li><li><a href="global.html#listeners">listeners</a></li><li><a href="global.html#queryStatement">queryStatement</a></li><li><a href="global.html#renderers">renderers</a></li><li><a href="global.html#rerender">rerender</a></li><li><a href="global.html#states">states</a></li><li><a href="global.html#useState">useState</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>xnets.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// src/xnets.js
 'use strict';
 
 /**
@@ -34,7 +121,7 @@ function rerender(name, value) {
  * เป็นฟังก์ชั่นที่สร้างขึ้นมาเพื่อรองรับในการใช้ `Attribute` **show-on** เนื่องจาก Parameter แรกคือชื่อของ State และส่วนที่สองคือ Operator ในการตรวจสอบ
  * และส่วนสุดท้ายคือข้อมูล ซึ่งเราสามารถเรียกใช้ฟังก์ชั่น `getStateValue` ในการดึง State มาตรวจสอบด้วยกันได้
  * 
- * @example <div show-on="counter equal getStateValue('counter2')">
+ * @example &lt;div show-on="counter equal getStateValue('counter2')">
  * จากตัวอย่างเป็นการตรวจสอบ State counter และ State counter2 ว่ามีจำนวนเท่ากันหรือไม่
  * 
  * @param {string} name - ชื่อของ State ที่คุณต้องการเรียกใช้
@@ -60,7 +147,7 @@ function queryStatement(name) {
         let classToHide = element.getAttribute('hide-class');
         let stateValue = renderers[name].getState();
 
-        if((typeof stateValue === 'string' && stateValue.length > 0) || stateValue > 0) {
+        if((typeof stateValue === 'string' &amp;&amp; stateValue.length > 0) || stateValue > 0) {
             let operator = args[1];
             let targetValue = args[2];
             let template = `${stateValue} ${operator === 'equal' ? '==' : '!='} ${targetValue}`;
@@ -98,7 +185,7 @@ export function addFunction(name, cb) {
 /**
  * ฟังก์ชั่นสำหรับการเพิ่มฟังก์ชั่นในฝั่งของ `Xnets Client` ทำขึ้นมาเพื่อใช้งานกับ `Attribute` `data-xnets-click`
  * 
- * @param {Array<XnetsAddFunction>} list - รวมฟังก์ชั่นที่ต้องการสร้างเพิ่มมาเพิ่มในฟังก์ชั่นเดียว
+ * @param {Array&lt;XnetsAddFunction>} list - รวมฟังก์ชั่นที่ต้องการสร้างเพิ่มมาเพิ่มในฟังก์ชั่นเดียว
  * @returns void
  */
 export function addFunctions(list) {
@@ -236,4 +323,33 @@ document.addEventListener('DOMContentLoaded', () => {
             queryStatement(index);
         }
     }, 0);
-});
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

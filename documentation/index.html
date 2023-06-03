@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Home</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#addFunction">addFunction</a></li><li><a href="global.html#addFunctions">addFunctions</a></li><li><a href="global.html#addListener">addListener</a></li><li><a href="global.html#communicate">communicate</a></li><li><a href="global.html#getStateValue">getStateValue</a></li><li><a href="global.html#listeners">listeners</a></li><li><a href="global.html#queryStatement">queryStatement</a></li><li><a href="global.html#renderers">renderers</a></li><li><a href="global.html#rerender">rerender</a></li><li><a href="global.html#states">states</a></li><li><a href="global.html#useState">useState</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p></p>
+                    <h1>Home</h1>
+                </header>
+                
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>🔥 FIVEM-NUI-LIB (Open Source Project)</h1>
+<p>A FiveM NUI Library created to make your code look eaiser and shorter. There are a lots of way to make the things you want. And I'm sure that my library will be much better than before.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Real-Time Update</strong>
+Just like state in React. When variable has changed value the component on website will be updated too.
+And the element in HTML can be showed or hidden by changing state value.</li>
+<li><strong>Input Ref</strong>
+Based on state. When input text change the state value will be updated automatically.</li>
+</ul>
+<h2>Usage</h2>
+<h5>Initialize</h5>
+<p>Create and  <code>script</code> tag and use type <code>module</code> in that</p>
+<pre class="prettyprint source lang-html"><code>// index.html
+
+&lt;script src=&quot;app.js&quot; type=&quot;module&quot;>&lt;/script>
+</code></pre>
+<pre class="prettyprint source lang-javascript"><code>// app.js
+
+import {} from 'path/to/xnets.js';
+</code></pre>
+<h5>Use a State</h5>
+<pre class="prettyprint source lang-javascript"><code>// app.js
+
+import { useState, addFunction } from 'path/to/xnets.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    	const [counter, setCounter] = useState(0, 'counter');
+	addFunction('addCount', () => setCounter(counter() + 1));
+});
+</code></pre>
+<pre class="prettyprint source lang-html"><code>// index.html
+
+&lt;span data-xnets=&quot;counter&quot;>&lt;/span>
+&lt;button type=&quot;button&quot; data-xnets-click=&quot;addCount()&quot;>Add Count&lt;/button>
+</code></pre>
+<h5>Use a Input Ref</h5>
+<pre class="prettyprint source lang-javascript"><code>// app.js
+
+import { useState, addFunction } from 'path/to/xnets.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    	const [title, setTitle] = useState('', 'title');
+	addFunction('showTitle', () => alert(title()));
+});
+</code></pre>
+<pre class="prettyprint source lang-html"><code>// index.html
+
+&lt;input type=&quot;text&quot; data-xnets-ref=&quot;title&quot;>
+&lt;button type=&quot;button&quot; data-xnets-click=&quot;showTitle()&quot;>Show Title&lt;/button>
+</code></pre>
+<h5>Use a Element Show or Hide</h5>
+<pre class="prettyprint source lang-javascript"><code>// app.js
+
+import { useState, addFunction } from 'path/to/xnets.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const [active, setActive] = useState(1, 'active');
+
+    addFunction('setActive', (id) => setActive(id));
+});
+</code></pre>
+<pre class="prettyprint source lang-html"><code>// index.html
+
+&lt;style>
+    .hidden {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+&lt;/style>
+
+&lt;div show-on=&quot;active equal 1&quot; show-class=&quot;show&quot; hide-class=&quot;hidden&quot;>Display 1&lt;/div>
+&lt;div show-on=&quot;active equal 2&quot; show-class=&quot;show&quot; hide-class=&quot;hidden&quot;>Display 2&lt;/div>
+&lt;div show-on=&quot;active equal 3&quot; show-class=&quot;show&quot; hide-class=&quot;hidden&quot;>Display 3&lt;/div>
+
+&lt;button type=&quot;button&quot; data-xnets-click=&quot;setActive(1)&quot;>Show 1&lt;/button>
+&lt;button type=&quot;button&quot; data-xnets-click=&quot;setActive(2)&quot;>Show 2&lt;/button>
+&lt;button type=&quot;button&quot; data-xnets-click=&quot;setActive(3)&quot;>Show 3&lt;/button>
+</code></pre>
+<hr>
+<h2>Thanks you all!</h2>
+<p>Special thanks to all contributors and supporters that starred this repository.</p>
+<p><strong>Our amazing contributors</strong></p>
+<ul>
+<li>Kittichai Malain (Frame) (Nervenetts)</li>
+<li>Woradorn Wimonchailerk (Noon) (Nova)</li>
+<li>Puriphong Chonanu (Ko) (Fagile)</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>
