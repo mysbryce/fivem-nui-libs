@@ -1,6 +1,6 @@
 # 🔥 FIVEM-NUI-LIB (Open Source Project)
 
-A FiveM NUI Library created to make your code look eaiser and shorter. There are a lots of way to make the things you want. And I'm sure that my library will be much better than before.
+A FiveM NUI Library created to make your code look easier and shorter. There are lots of ways to achieve the things you want. And I'm confident that my library will be even better than before.
 
 ## Features
 
