@@ -4,11 +4,10 @@ A FiveM NUI Library created to make your code look easier and shorter. There are
 
 ## Features
 
-* **Real-Time Update**
-  Just like state in React. When variable has changed value the component on website will be updated too.
-  And the element in HTML can be showed or hidden by changing state value.
+* **Real-time updates**
+  Are similar to those in React, where the component on the website is updated when a variable's value changes. Additionally, the state value can be used to show or hide elements in HTML.
 * **Input Ref**
-  Based on state. When input text change the state value will be updated automatically.
+  The state value is automatically updated based on the changes in the input text.
 
 ## Usage
 
